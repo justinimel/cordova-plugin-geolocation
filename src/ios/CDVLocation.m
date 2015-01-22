@@ -154,8 +154,9 @@
     } else {
         __highAccuracyEnabled = NO;
         // TODO: Set distance filter to 10 meters? and desired accuracy to nearest ten meters? arbitrary.
-        self.locationManager.distanceFilter = 10;
-        self.locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
+        self.locationManager.distanceFilter = 5;
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyKilometer;
+        self.locationManager.pausesLocationUpdatesAutomatically = NO;
     }
 }
 
