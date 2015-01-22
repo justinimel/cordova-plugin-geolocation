@@ -18,10 +18,10 @@
   under the License.
 -->
 
-<plugin xmlns="http://apache.org/cordova/ns/plugins/jmi"
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
 xmlns:rim="http://www.blackberry.com/ns/widgets"
 xmlns:android="http://schemas.android.com/apk/res/android"
-           id="org.apache.cordova.geolocation.jmi"
+           id="com.jmi.cordova.geolocation"
       version="0.3.10">
 
     <name>Geolocation</name>
