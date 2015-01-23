@@ -60,6 +60,7 @@
     if (self) {
         self.locationManager = [[CLLocationManager alloc] init];
         self.locationManager.delegate = self; // Tells the location manager to send updates to this object
+        self.locationManager.pausesLocationUpdatesAutomatically = NO;
         __locationStarted = NO;
         __highAccuracyEnabled = NO;
         self.locationData = nil;
@@ -154,9 +155,8 @@
     } else {
         __highAccuracyEnabled = NO;
         // TODO: Set distance filter to 10 meters? and desired accuracy to nearest ten meters? arbitrary.
-        self.locationManager.distanceFilter = kCLDistanceFilterNone;
+        self.locationManager.distanceFilter = 1;
         self.locationManager.desiredAccuracy = kCLLocationAccuracyKilometer;
-        self.locationManager.pausesLocationUpdatesAutomatically = NO;
     }
 }
 
